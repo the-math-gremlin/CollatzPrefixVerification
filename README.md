@@ -11,12 +11,19 @@ by *Sadie A. Sherratt*
 
 Every base-3 prefix of length 10 was tested for contraction under the modified Collatz map:
 
-- For each prefix \( r \in [0, 3^{10}) \), the minimal representative \( n_0 = 3^{10} \cdot r \) was generated.
-- The Collatz map \( T(n) = \frac{n}{2} \) if even, \( \frac{3n+1}{2} \) if odd was iterated.
-- Each trajectory was checked for:
-  - A strict drop in the symbolic height function, or
-  - Entry into the known terminal loop \(\{1, 2, 4\}\).
+For each prefix r in the range [0, 3^10), the minimal representative n₀ = 3^10 × r was generated.
 
+The Collatz map T(n) was defined as:
+
+    T(n) = n / 2 if n is even
+
+    T(n) = (3n + 1) / 2 if n is odd
+
+Each trajectory was checked for one of the following outcomes:
+
+    A strict drop in the symbolic height function
+
+    Entry into the known terminal cycle {1, 2, 4}
 No prefix failed to contract.
 
 ---
